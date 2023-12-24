@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+slug: /
 ---
 
 # Tutorial Intro
@@ -7,6 +7,46 @@ sidebar_position: 1
 Let's discover **Docusaurus in less than 5 minutes**.
 
 ## Getting Started
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+:::note
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::tip
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::info
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::warning
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::danger
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+
 
 Get started by **creating a new site**.
 

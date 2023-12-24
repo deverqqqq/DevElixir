@@ -24,10 +24,10 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'deverqqqq', // Usually your GitHub org/user name.
+  projectName: 'tech-docs', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -48,7 +48,8 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/deverqqqq/Docusaurus/tree/master/docs/',
+          routeBasePath:'/',
         },
         blog: {
           showReadingTime: true,
@@ -61,13 +62,18 @@ const config = {
           customCss: './src/css/custom.css',
         },
       }),
-    ],
+    ]
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'My Site',
@@ -78,9 +84,15 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'toolStackSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'ToolStack',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'azureSidebar',
+            position: 'left',
+            label: 'Azure',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
