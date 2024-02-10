@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -42,14 +42,14 @@ const config = {
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/deverqqqq/Docusaurus/tree/master/docs/',
-          routeBasePath:'/',
+          routeBasePath: '/',
         },
         blog: {
           showReadingTime: true,
@@ -61,7 +61,11 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
-      }),
+        gtag: {
+          trackingID: 'G-NSENBHQE50',
+          anonymizeIP: true,
+        },
+      },
     ]
   ],
 

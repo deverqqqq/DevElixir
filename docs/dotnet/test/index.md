@@ -4,7 +4,7 @@ sidebar_label: Index
 keywords: [dotnet, test, 測試]
 description: 在 dotnet 平台進行測試的相關內容索引
 sidebar_position: 1
-tags: [dotnet, "測試", "單元測試", "整合測試", "負載測試"]
+tags: [dotnet, "測試", "單元測試", "整合測試", "負載測試", Mindmap]
 ---
 
 # Intro
