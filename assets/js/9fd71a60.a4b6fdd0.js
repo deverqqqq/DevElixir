@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[6200],{5136:e=>{e.exports=JSON.parse('{"title":"Test","slug":"/category/test","permalink":"/DevElixir/category/test","navigation":{"previous":{"title":"Index","permalink":"/DevElixir/dotnet/csharp/"},"next":{"title":"Index","permalink":"/DevElixir/dotnet/test/"}}}')}}]);
