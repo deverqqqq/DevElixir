@@ -2,7 +2,7 @@
 title: Index
 sidebar_label: Index
 keywords: [ToolStack]
-description: 彙整個人在軟體開發中會使用到的技術和做法
+description: 整理個人在軟體開發中會使用到的工具
 sidebar_position: 1
 tags: [ToolStack]
 ---

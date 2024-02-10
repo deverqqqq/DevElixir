@@ -4,40 +4,50 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: '技術筆記',
+    Svg: require('@site/static/img/25225404_7055188.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        盡量由深入簡的整理技術內容，讓內容能夠一目了然，同時加強既有的觀念。<br></br>
+        Image by <a href="https://www.freepik.com/free-vector/hand-drawn-flat-design-api-illustration_25225404.htm#&position=6&from_view=collections&uuid=61fc20b1-4090-4230-a55b-4300f3a28540#page=1&query=undefined&from_query=undefined&position=1&from_view=collections&uuid=61fc20b1-4090-4230-a55b-4300f3a28540">Freepik</a>
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: '技術研究',
+    Svg: require('@site/static/img/25644111_7036170.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        紀錄平常研究的內容，透過更多且廣的技術面向，提升視野。<br></br>
+        <a href="https://www.freepik.com/free-vector/flat-design-devops-illustration_25644111.htm#&position=8&from_view=collections&uuid=5903907b-abf2-477c-83fb-dd2e734a0344">Image by pikisuperstar</a> on Freepik
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: '個人專案',
+    Svg: require('@site/static/img/25225399_7055171.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        SideProject<br></br>
+        Image by <a href="https://www.freepik.com/free-vector/hand-drawn-flat-design-intranet-illustration_25225399.htm#&position=4&from_view=collections&uuid=fa3da6f1-740c-4124-94bf-72a14ba8597e?sign-up=google">Freepik</a>
+      </>
+    ),
+  },
+  {
+    title: 'NoAds',
+    Svg: require('@site/static/img/25225428_7054829.svg').default,
+    description: (
+      <>
+        無廣告干擾<br></br>
+        Image by <a href="https://www.freepik.com/free-vector/hand-drawn-flat-design-ransomware-illustration_25225428.htm#&position=7&from_view=collections&uuid=61fc20b1-4090-4230-a55b-4300f3a28540#page=1&query=undefined&from_query=undefined&position=1&from_view=collections&uuid=61fc20b1-4090-4230-a55b-4300f3a28540#position=7">Freepik</a>
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--6')}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
