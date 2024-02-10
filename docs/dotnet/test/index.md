@@ -19,7 +19,7 @@ mindmap
     類型
       單元測試
         定義[最小可測試單元的測試]
-        MSTest, NUnit, XUnit
+        MSTest, NUnit, xUnit
       整合測試
         定義[模組間互動的測試]
         TestServer
