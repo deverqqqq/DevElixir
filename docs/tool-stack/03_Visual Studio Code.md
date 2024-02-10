@@ -5,6 +5,7 @@ keywords: [Visual Studio Code]
 description: 整理 VS Code 常用的擴充套件
 # sidebar_position: 1
 tags: [Visual Studio Code]
+draft: true
 ---
 
 ## Install

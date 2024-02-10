@@ -5,6 +5,7 @@ keywords: [Git, version control, VCS]
 description: Git
 # sidebar_position: 1
 tags: [Git]
+draft: true
 ---
 
 ## Install
