@@ -78,6 +78,9 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: false,
       },
+      mermaid: {
+        theme: { light: 'forest', dark: 'dark' },
+      },
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'DevElixir',
@@ -101,8 +104,9 @@ const config = {
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/deverqqqq',
-            label: 'GitHub',
             position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
           },
         ],
       },
@@ -154,7 +158,7 @@ const config = {
       prism: {
         theme: prismThemes.vsLight,
         darkTheme: prismThemes.vsDark,
-        additionalLanguages: ['csharp'],
+        additionalLanguages: ['csharp', 'json', 'bash'],
       },
     }),
 };
