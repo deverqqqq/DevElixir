@@ -103,6 +103,23 @@ const config = {
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
+            type: 'dropdown',
+            label: 'Projects',
+            position: 'right',
+            items: [
+              {
+                label: 'dotnet-template',
+                href: 'https://github.com/deverqqqq/dotnet-templates',
+              },
+              // {
+              //   type: 'doc',
+              //   label: 'Social',
+              //   docId: 'social',
+              // },
+              // ... more items
+            ],
+          },
+          {
             href: 'https://github.com/deverqqqq',
             position: 'right',
             className: 'header-github-link',

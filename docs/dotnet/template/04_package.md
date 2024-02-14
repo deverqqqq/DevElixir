@@ -3,7 +3,7 @@ title: "TemplatePack"
 sidebar_label: "Package"
 keywords: ["dotnet template", "template package", "範本封裝"]
 description: "將範本打包成 Package"
-sidebar_position: 2
+sidebar_position: 4
 tags: ["dotnet template"]
 ---
 

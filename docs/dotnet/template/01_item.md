@@ -3,7 +3,7 @@ title: "Item Template"
 sidebar_label: "Item"
 keywords: ["dotnet template", "item template", "範本"]
 description: "動手做一個 Item Template"
-sidebar_position: 2
+sidebar_position: 1
 tags: ["dotnet template"]
 ---
 

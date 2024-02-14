@@ -31,6 +31,7 @@ parent_folder
     - BenchmarkDotNet
     - Dapper
     - Dumpify
+    - Mapperly
     - Microsoft.Data.SqlClient
 
 2. 設定 sourceName，這邊設定的字串，會自動於建立範本時被取代掉，取代的值取決於`dotnet new -n xxx` 參數，如果沒有給的話預設值會是資料夾的名稱。
@@ -175,5 +176,3 @@ dotnet new uninstall
 ## Reference
 
 [MSLearn](https://learn.microsoft.com/zh-tw/dotnet/core/tutorials/cli-templates-create-project-template)
-
-

@@ -3,7 +3,7 @@ title: dotnet-template 介紹
 sidebar_label: 介紹
 keywords: ["dotnet template", "範本"]
 description: 如何在 dotnet 中建立並使用自定義範本
-sidebar_position: 1
+sidebar_position: 0
 tags: ["dotnet template", Mindmap]
 ---
 
@@ -36,6 +36,11 @@ tags: ["dotnet template", Mindmap]
 
 3. Solution Template
     > 可以將整個解決方案做成範本，對於團隊來說，可以很方便將開發架構做成方案範本，方便大家使用。
+
+## MyTemplate
+
+這邊放這我練習用的檔案和我自己做的範本，有需要可以參考。  
+[Repository](https://github.com/deverqqqq/dotnet-templates)
 
 ## Mindmap
 
