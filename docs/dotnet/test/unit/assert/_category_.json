@@ -1,0 +1,8 @@
+{
+  "label": "驗證目標",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "驗證章節的內容建議按照順序閱讀，內容中使用的範例有連續情境。"
+  }
+}

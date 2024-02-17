@@ -46,7 +46,7 @@ parent_folder
 
   <TabItem value="template.json" label="template.json">
 
-    ```json
+    ```json showLineNumbers
     {
         "$schema": "http://json.schemastore.org/template",
         "author": "deverqqqq",
@@ -100,7 +100,7 @@ parent_folder
 
 ## 安裝
 
-```sh
+```sh showLineNumbers
 # 將 cursor 移動到範本資料夾
 cd /your-template-path
 
@@ -124,7 +124,7 @@ dotnet new uninstall
 
 1. 透過範本快速建立方案
 
-    ```sh
+    ```sh showLineNumbers
     dotnet new webapi-3layer -n Dev.POC
     ```
     
@@ -145,7 +145,7 @@ dotnet new uninstall
 
 照著畫面的命令執行即可
 
-```sh
+```sh showLineNumbers
 # 1. 列出已安裝項目
 dotnet new uninstall
 
