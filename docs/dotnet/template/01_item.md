@@ -41,7 +41,7 @@ parent_folder
 <Tabs>
   <TabItem value="StringExtensions.cs" label="StringExtensions.cs" default>
 
-    ```csharp
+    ```csharp showLineNumbers
     namespace System;
 
     public static class StringExtensions
@@ -58,7 +58,7 @@ parent_folder
 
   <TabItem value="template.json" label="template.json">
 
-    ```json
+    ```json showLineNumbers
     {
         "$schema": "http://json.schemastore.org/template",
         "author": "deverqqqq",
@@ -90,7 +90,7 @@ parent_folder
 
 ## 安裝
 
-```sh
+```sh showLineNumbers
 # 將 cursor 移動到範本資料夾
 cd /your-template-path
 
@@ -117,7 +117,7 @@ dotnet new uninstall
 
 1. 不使用參數
 
-    ```sh
+    ```sh showLineNumbers
     dotnet new stringext
     ```
     
@@ -125,7 +125,7 @@ dotnet new uninstall
 
 2. 查詢可使用參數
 
-    ```sh
+    ```sh showLineNumbers
     dotnet new stringext -?
     ```
     ![](img/2024-02-11-23-37-46.png)
@@ -136,7 +136,7 @@ dotnet new uninstall
 
 照著畫面的命令執行即可
 
-```sh
+```sh showLineNumbers
 # 1. 列出已安裝項目
 dotnet new uninstall
 

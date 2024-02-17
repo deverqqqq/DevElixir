@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 ## 開始之前
 
 1. 安裝範本封裝工具
-   ```sh
+   ```sh showLineNumbers
    dotnet new install Microsoft.TemplateEngine.Authoring.Templates
    ```
 
@@ -35,14 +35,14 @@ import TabItem from '@theme/TabItem';
 
 ### 在 working 中，建立封裝的 .csproj 定義檔
 
-```sh
+```sh showLineNumbers
 dotnet new templatepack -n "AdatumCorporation.Utility.Templates"
 ```
 
 ![](img/2024-02-12-16-35-54.png)
 
 簡單調整
-```xml
+```xml showLineNumbers
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -107,7 +107,7 @@ working
 
 ### 封裝
 
-```sh
+```sh showLineNumbers
 # 確保目前的工作目錄在 working 資料夾內
 dotnet pack
 ```
@@ -116,7 +116,7 @@ dotnet pack
 
 ### 透過 nupkg 進行安裝
 
-```sh
+```sh showLineNumbers
 # 安裝
 dotnet new install .\bin\Release\AdatumCorporation.Utility.Templates.1.0.0.nupkg
 
@@ -130,7 +130,7 @@ dotnet new uninstall
 
 照著畫面的命令執行即可
 
-```sh
+```sh showLineNumbers
 # 1. 列出已安裝項目
 dotnet new uninstall
 

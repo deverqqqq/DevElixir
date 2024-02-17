@@ -78,6 +78,12 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: false,
       },
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true
+        }
+      },
       mermaid: {
         theme: { light: 'forest', dark: 'dark' },
       },
