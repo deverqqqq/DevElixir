@@ -52,7 +52,7 @@ parent_folder
 <Tabs>
   <TabItem value="Program.cs" label="Program.cs" default>
 
-    ```csharp
+    ```csharp showLineNumbers
     using System;
 
     Console.WriteLine("Hello, World!");
@@ -61,7 +61,7 @@ parent_folder
 
   <TabItem value="FakeLinqpadConsole.csproj" label="FakeLinqpadConsole.csproj">
 
-    ```xml
+    ```xml showLineNumbers
     <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
@@ -85,7 +85,7 @@ parent_folder
 
     <TabItem value="template.json" label="template.json">
 
-    ```json
+    ```json showLineNumbers
     {
         "$schema": "http://json.schemastore.org/template",
         "author": "deverqqqq",
@@ -108,7 +108,7 @@ parent_folder
 
 ## 安裝
 
-```sh
+```sh showLineNumbers
 # 將 cursor 移動到範本資料夾
 cd /your-template-path
 
@@ -133,7 +133,7 @@ dotnet new uninstall
 1. 不使用參數
 > 預設使用資料夾名稱替換 csproj 檔名
 
-    ```sh
+    ```sh showLineNumbers
     dotnet new fakeLinqpad
     ```
     
@@ -142,7 +142,7 @@ dotnet new uninstall
 2. 查詢可使用參數
     > 使用參數`MyFakeLinqpad`名稱替換 csproj 檔名
 
-    ```sh
+    ```sh showLineNumbers
     dotnet new fakeLinqpad -n MyFakeLinqpad
     ```
 
@@ -165,7 +165,7 @@ dotnet new uninstall
 
 照著畫面的命令執行即可
 
-```sh
+```sh showLineNumbers
 # 1. 列出已安裝項目
 dotnet new uninstall
 
