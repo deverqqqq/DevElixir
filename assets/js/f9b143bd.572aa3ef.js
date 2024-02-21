@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[1952],{488:e=>{e.exports=JSON.parse('{"label":"design pattern","permalink":"/tags/design-pattern","allTagsPath":"/tags","count":1,"items":[{"id":"design-pattern/index","title":"Index","description":"C#","permalink":"/design-pattern/"}],"unlisted":false}')}}]);
