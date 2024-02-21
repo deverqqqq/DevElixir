@@ -103,6 +103,12 @@ const config = {
           // },
           {
             type: 'docSidebar',
+            sidebarId: 'designPatternSidebar',
+            position: 'left',
+            label: 'Design Pattern',
+          },
+          {
+            type: 'docSidebar',
             sidebarId: 'dotnetSidebar',
             position: 'left',
             label: 'Dotnet',
