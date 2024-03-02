@@ -19,6 +19,7 @@ xUnit.net 是 dotnet 平台的單元測試框架之一，目前主要由 Brad Wi
    - NUnit: 使用`SetUp`&`TearDown`
    - xUnit: 測試類別的`Constructor`&`Dispose`
     > 透過 C# 語法的基本概念，結合單元測試觀念，直接透過`Constructor`&`Dispose`處理，不需要寫額外的標籤，讓整個測試看起來更加的簡單直覺。
+    
 ## 重點觀念
 
 
