@@ -22,6 +22,6 @@ tags: [algo]
 2. 需要依據情境選擇適合的資料結構，才能降低花費的時間和空間資源。
 
 ## Reference
-https://www.hello-algo.com
-https://zh.wikipedia.org/zh-tw/%E7%AE%97%E6%B3%95
+https://www.hello-algo.com  
+https://zh.wikipedia.org/zh-tw/%E7%AE%97%E6%B3%95  
 https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84
