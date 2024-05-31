@@ -133,6 +133,12 @@ const config = {
             position: 'left',
             label: 'Dotnet',
           },
+          {
+            type: 'docSidebar',
+            sidebarId: 'devOpsSidebar',
+            position: 'left',
+            label: 'DevOps',
+          },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             type: 'dropdown',
