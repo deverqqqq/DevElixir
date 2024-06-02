@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[5041],{4912:e=>{e.exports=JSON.parse('{"categoryGeneratedIndex":{"title":"Docker","slug":"/category/docker","permalink":"/category/docker","sidebar":"devOpsSidebar","navigation":{"next":{"title":"\u8d70\u5411\u5bb9\u5668\u5316","permalink":"/dev-ops/docker/intro"}}}}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[3040],{8499:s=>{s.exports=JSON.parse('{"label":"C#","permalink":"/tags/c","allTagsPath":"/tags","count":1,"items":[{"id":"dotnet/csharp/index","title":"Index","description":"C#","permalink":"/dotnet/csharp/"}],"unlisted":false}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[4464],{9640:t=>{t.exports=JSON.parse('{"title":"Template","slug":"/category/template","permalink":"/category/template","navigation":{"previous":{"title":"xUnit","permalink":"/dotnet/test/tool-stack/framework/xUnit"},"next":{"title":"\u4ecb\u7d39","permalink":"/dotnet/template/intro"}}}')}}]);

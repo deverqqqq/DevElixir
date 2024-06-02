@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[9696],{4460:e=>{e.exports=JSON.parse('{"tag":{"label":"hash-table","permalink":"/tags/hash-table","allTagsPath":"/tags","count":1,"items":[{"id":"algo/leetcode/easy/Two Sum","title":"Two Sum","description":"Two Sum","permalink":"/algo/leetcode/easy/Two Sum"}],"unlisted":false}}')}}]);
