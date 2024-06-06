@@ -5,7 +5,6 @@ keywords: ["docker"]
 description: Docker 從何而來
 sidebar_position: 1
 tags: [docker]
-draft: true
 ---
 
 ## 起源
@@ -18,7 +17,7 @@ draft: true
 ## Virtual Machine
 VMware的出現，終於有了一種技術，允許我們在一個伺服器上安全地運行多個應用程式。
 
-這是一個改變遊戲規則的技術。企業可以在現有伺服器的空餘容量上運行新應用程序，這掀起了一個最大化現有資產價值的黃金時代。
+這是一個改變遊戲規則的技術。企業可以在現有伺服器的閒置資源上運行應用，這掀起了一個最大化現有資產價值的黃金時代。
 
 1. 特點
    - 每個虛擬機都有完整的 OS 和配置的硬體資源 (CPU, RAM)。
@@ -39,21 +38,14 @@ VMware的出現，終於有了一種技術，允許我們在一個伺服器上�
 :::
 
 ## Docker
-Docker 是使 Linux 容器易於使用的工具。
-
-Docker和Windows
-微軟努力將Docker和容器技術引入Windows平台。
-
-截至撰寫本文時，Windows桌面和伺服器平台支持以下兩種容器：
+Docker 是使 Linux Container 易於使用的工具。
 
 ## Docker on Windows
-微軟的 WSL 技術，透過內建 Linux 核心的方式，在 Windows 上面執行Linux Container 變得很容易。
-
+微軟的 WSL ，透過內建 Linux 核心的方式，使得在 Windows 上面執行 Linux Container 變得很容易。  
 雖然 Windows 本身也有自己的容器技術(Windows Container)，但最主流的還是 Linux Container。
 
 ## WebAssembly
-WebAssembly(Wasm) 是一種現代二進制指令集，用於構建比容器更小、更快、更安全、更便攜的應用程式。
-
+WebAssembly(Wasm) 是一種現代二進制指令集，用於構建比容器更小、更快、更安全、更便攜的應用程式。  
 可以用自己喜歡的程式語言建置，並將其編譯為 WASM binary，就可以在任何有 Wasm-Runtime 的地方執行。
 
 :::warning
