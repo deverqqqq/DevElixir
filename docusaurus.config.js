@@ -115,12 +115,12 @@ const config = {
           //   position: 'left',
           //   label: 'ToolStack',
           // },
-          {
-            type: 'docSidebar',
-            sidebarId: 'algoSidebar',
-            position: 'left',
-            label: 'Algo',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'algoSidebar',
+          //   position: 'left',
+          //   label: 'Algo',
+          // },
           {
             type: 'docSidebar',
             sidebarId: 'designPatternSidebar',
