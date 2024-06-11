@@ -85,6 +85,9 @@ Docker Image 的多層結構允許層之間的共享和重用。每一層都有�
 ### Multi-Architecture
 1. 清單列表
 2. 清單
-透過這兩個資訊，可以知道對應不同架構下，需要的不同Layer資訊，從而透過一個image，建立不同架構下的應用程式。
+透過這兩個資訊，可以知道對應不同架構下，需要的不同 Layer 資訊，從而透過一個 image，建立不同架構下的應用程式。
 
 ![](img/2024-06-11-12-08-42.png)
+
+## Reference
+https://leanpub.com/dockerdeepdive

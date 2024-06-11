@@ -2,6 +2,7 @@
   "label": "Docker",
   "position": 2,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "description": "整理 Docker 相關的內容，主要參考的來源是 Docker-DeepDive -> https://leanpub.com/dockerdeepdive"
   }
 }

@@ -62,3 +62,5 @@ Kubernetes 是部署和管理容器化應用的標準平台。
 Kubernetes 雖然不是管理容器的唯一選擇，但目前主流幾乎都以 Kubernetes 作為管理的工具。
 :::
 
+## Reference
+https://leanpub.com/dockerdeepdive
