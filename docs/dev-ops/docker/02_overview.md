@@ -54,3 +54,37 @@ Shim 為 containerd 和 runc 之間提供了一個抽象層，使容器成為 Da
 ### RUNC
 runc是實際建立和執行容器的底層 runtime。它是根據 OCI 規範實現的，確保了容器的標準化。  
 runc負責處理容器的所有細節，如設置命名空間、控制組、掛載文件系統等。
+
+## Docker Image
+Docker Image 可以將其理解為一組 vm-template，裡面包含啟動應用所需的內容。  
+Docker 可以透過這個 Image 來啟動一組或是多組的應用。
+
+Docker Image 的多層結構允許層之間的共享和重用。每一層都有自己的 Hash Value，當我們 pull image 下來時，會檢查 layer 是否已經存在，就不需要再 pull 下來。  
+(Sharing image layers)
+
+![](img/2024-06-11-11-36-06.png)
+
+### Base Layer
+> 所有的 Docker Image 都是從 Base Layer 往上添加新層。
+
+### Merge Layer
+
+上層的文件可以選擇覆蓋下層的文件，透過多重合併的機制，可以確保每一層的獨立，又可以根據需要添加多層文件，簡化每一層的邏輯。
+
+![](img/2024-06-11-11-50-05.png)
+![](img/2024-06-11-11-50-32.png)
+
+### Hashes
+同一個標籤也可能會是不同版本的 Image，所以需要使用 Hash，來讓我們可以識別版本內容是否有差異。  
+- Images digests: Image Manifest File 的 Hash。
+- Layer digests: Layer Contents 的 Hash。
+
+1. Content hashes: 未壓縮的 Hash。
+2. distribution hashes: 壓縮的 Hash。(減少網路流量)
+
+### Multi-Architecture
+1. 清單列表
+2. 清單
+透過這兩個資訊，可以知道對應不同架構下，需要的不同Layer資訊，從而透過一個image，建立不同架構下的應用程式。
+
+![](img/2024-06-11-12-08-42.png)
