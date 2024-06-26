@@ -123,9 +123,9 @@ const config = {
           // },
           {
             type: 'docSidebar',
-            sidebarId: 'designPatternSidebar',
+            sidebarId: 'patternSidebar',
             position: 'left',
-            label: 'Design Pattern',
+            label: 'Pattern',
           },
           {
             type: 'docSidebar',
