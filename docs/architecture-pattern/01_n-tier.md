@@ -5,7 +5,6 @@ keywords: ['architecture pattern']
 description: N-Tier Architecture
 sidebar_position: 1
 tags: ['architecture pattern']
-draft: true
 ---
 
 ## N-Tier 架構
@@ -21,7 +20,7 @@ N-Tier 架構中的【N】代表層數，可以是 2、3、4 或更多，最常�
 
 ```mermaid
 sequenceDiagram
-    Client(Browser)->>Controller(Endpoint): Request
+    Client->>Controller(Endpoint): Request
     Controller(Endpoint)->>Service: 取得/處理 Request 內容
     Service->>Repository: 呼叫資料層取得資料
 
@@ -31,7 +30,7 @@ sequenceDiagram
     Repository->>Service: 根據商業邏輯處理回傳資料
 
     Service->>Controller(Endpoint): 回傳處理後資料
-    Controller(Endpoint)->>Client(Browser): Response
+    Controller(Endpoint)->>Client: Response
 ```
 
 ### 優點
@@ -62,8 +61,40 @@ sequenceDiagram
 ```mermaid
 block-beta
   columns 3
+
+  Client:3
+
+  block:endpoint:3
+    Request space Response 
+  end
   
   controller:3
-  a space b
-  c   d   e
+
+  block:service:3
+    InfoModel space Dto
+  end
+
+  Service:3
+
+  block:repository:3
+    Condition space DataModel
+  end
+
+  Repository:3
+
+  space   
+  blockArrowId<["CRUD"]>(y)
+  blockArrowId<["CRUD"]>(x, down)
+  space
+  
+  DB:3
+
+  Client-->Request
+  Request-->InfoModel
+  InfoModel-->Condition
+  Condition-->Repository
+
+  DataModel-->Dto
+  Dto-->Response
+  Response-->Client
 ```
