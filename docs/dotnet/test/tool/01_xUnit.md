@@ -22,8 +22,19 @@ xUnit.net 是 dotnet 平台的單元測試框架之一，目前主要由 Brad Wi
     
 ## 重點觀念
 
+1. 語意化標籤  
+`[Fact]`：表示驗證事實，可以獨立進行測試。
+`[Theory]`：表示情境，通常搭配`[InlineData]`或是`[MemberData]`使用，透過多種設定好的參數組合來驗證結果。
 
+2. 平行執行  
+預設情況下，不同的測試類別會同時執行，增加單元測試的效率。  
+如果希望不同的測試類別不啟動平行執行，可以透過設定同一個測試集合 (Collection) 來避免。
 
+3. Shared Context  
+- Constructor and Dispose: 不同的測試方法共享初始化和清理邏輯，沒有其他共享物件。
+- Class Fixtures: 在同一個測試類別內，多個測試方法間共享物件實體。
+- Collection Fixtures: 在同一個測試集合內，多個測試類別間共享物件實體。
+- Assembly Fixtures: 整個測試組件內共享物件實體。
 
 ## 流程
 
