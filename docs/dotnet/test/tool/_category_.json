@@ -1,0 +1,8 @@
+{
+  "label": "測試工具",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "相關測試工具的核心概念和使用方法。"
+  }
+}
