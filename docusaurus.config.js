@@ -129,9 +129,9 @@ const config = {
           },
           {
             type: 'docSidebar',
-            sidebarId: 'dotnetSidebar',
+            sidebarId: 'techSidebar',
             position: 'left',
-            label: 'Dotnet',
+            label: 'Tech',
           },
           {
             type: 'docSidebar',
