@@ -11,6 +11,14 @@ tags: ["Message Queue"]
 
 訊息佇列使應用程式間可以通過發送和接收訊息來做交互，而不需要直接顯式呼叫。
 
+```mermaid
+flowchart LR
+    Producer1 -->|Message1| MessageBroker[(Message Broker)]
+    Producer2 -->|Message2| MessageBroker
+    MessageBroker -->|Message1| Consumer1
+    MessageBroker -->|Message2| Consumer2
+```
+
 ### 效益
 
 - 解耦：通過引入訊息佇列，發送者和接收者不必同時在線，從而實現應用程序之間的解耦。
