@@ -93,6 +93,7 @@ block-beta
   InfoModel-->Condition
   Condition-->Repository
 
+  Repository-->DataModel
   DataModel-->Dto
   Dto-->Response
   Response-->Client
