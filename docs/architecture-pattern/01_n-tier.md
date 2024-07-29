@@ -1,9 +1,8 @@
 ---
 title: N-Tier Architecture
-sidebar_label: N-Tier
+sidebar_label: N-Tier Architecture
 keywords: ['architecture pattern']
 description: N-Tier Architecture
-sidebar_position: 1
 tags: ['architecture pattern']
 ---
 
@@ -94,6 +93,7 @@ block-beta
   InfoModel-->Condition
   Condition-->Repository
 
+  Repository-->DataModel
   DataModel-->Dto
   Dto-->Response
   Response-->Client
