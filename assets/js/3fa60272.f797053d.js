@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[7296],{9017:e=>{e.exports=JSON.parse('{"categoryGeneratedIndex":{"title":"C#","slug":"/category/c","permalink":"/category/c","sidebar":"dotnetSidebar","navigation":{"next":{"title":"Index","permalink":"/dotnet/csharp/"}}}}')}}]);
