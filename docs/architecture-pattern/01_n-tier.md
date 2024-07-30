@@ -67,7 +67,7 @@ block-beta
     Request space Response 
   end
   
-  controller:3
+  Controller:3
 
   block:service:3
     InfoModel space Dto
