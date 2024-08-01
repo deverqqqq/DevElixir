@@ -4,7 +4,6 @@ title: '[Day 1] 第一個 React 應用程式 !'
 authors: [deverqqqq]
 tags: [React, ZeroToHero]
 date: 2024-08-01T10:29
-draft: true
 ---
 
 import Tabs from '@theme/Tabs';
@@ -122,7 +121,7 @@ root.render(
 
 ## 為何需要前端框架
 
-前端基本上要做的事情，最主要就是把`資料`透過`UI`呈現在畫面上。當我們把重點聚焦在這個功能上，會發現傳統的做法 (ex: jQuery)，會需要透過遍歷整個 DOM，找到目標的原件，然後更新內容，當畫面上的內容越來越多複雜，每個區塊的資料來源 API 可能也都不一樣，如果不使用框架的作法，為了避免複雜度和可維護性，最終也會做出類似前端框架的東西。
+前端基本上要做的事情，最主要就是把`資料`透過`UI`呈現在畫面上。當我們把重點聚焦在這個功能上，會發現傳統的做法 (ex: jQuery)，會需要透過遍歷整個 DOM，找到目標的元件，然後更新內容，當畫面上的內容區塊越來越複雜，每個區塊的資料來源 API 可能也都不一樣，就算不使用框架的作法，為了避免複雜度和可維護性，最終也會做出類似前端框架的東西。
 
 從上面的例子可以看到，相較於不使用框架的寫法，這種做法可以更乾淨的切分畫面的組件，然後也不再需要去找到對應的 DOM 然後去執行同步資料。
 
@@ -141,8 +140,8 @@ ReactDOM 是針對 Web 平台的特定實現。它負責將 React 組件渲染�
 ### 其他渲染層
 - React Native：用於移動應用開發，允許你使用相同的 React 語法構建原生 iOS 和 Android 應用。
 - React Native for Windows and macOS：擴展 React Native，使其可以用於開發桌面應用程序。
-- React 360：用於構建虛擬現實（VR）應用。
-- Ink：用於構建命令行界面（CLI）應用程序。
+- React 360：用於構建虛擬現實 (VR) 應用。
+- Ink：用於構建命令行界面 (CLI) 應用程序。
 
 ## Reference
 [The Ultimate React Course](https://www.udemy.com/course/the-ultimate-react-course)
