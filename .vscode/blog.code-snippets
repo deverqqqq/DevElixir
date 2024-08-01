@@ -1,0 +1,38 @@
+{
+  "ReactDay_Template": {
+    "prefix": "reactday",
+    "body": [
+      "---",
+      "# slug: day-N",
+      "title: '[Day N] XXXXXX'",
+      "authors: [deverqqqq]",
+      "tags: [React, ZeroToHero]",
+      "date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}",
+      "draft: true",
+      "---",
+      "",
+      "```",
+      "     React",
+      "      Day 1",
+      "     Day 12",
+      "    Day 123",
+      "   Day 1234",
+      "  Day 12345",
+      " Day 123456",
+      "Day 1234567",
+      "```",
+      "",
+      "<!-- Description -->",
+      "",
+      "<!--truncate-->",
+      "",
+      "",
+      "## Reference",
+      "[The Ultimate React Course](https://www.udemy.com/course/the-ultimate-react-course)",
+      "",
+      "",
+      ""
+    ],
+    "description": "ReactDay_Template"
+  }
+}
