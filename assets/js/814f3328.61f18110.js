@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"[Day 1] \u7b2c\u4e00\u500b React \u61c9\u7528\u7a0b\u5f0f !","permalink":"/blog/react/day-1-first-react-app","unlisted":false}]}')}}]);
