@@ -82,7 +82,7 @@ const config = {
       crossorigin: 'anonymous',
     },
   ],
-
+  plugins: ['@docusaurus/theme-live-codeblock'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -97,6 +97,13 @@ const config = {
           hideable: true,
           autoCollapseCategories: true
         }
+      },
+      liveCodeBlock: {
+        /**
+         * The position of the live playground, above or under the editor
+         * Possible values: "top" | "bottom"
+         */
+        playgroundPosition: 'bottom',
       },
       mermaid: {
         theme: { light: 'forest', dark: 'dark' },
