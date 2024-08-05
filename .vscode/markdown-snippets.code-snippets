@@ -1,0 +1,7 @@
+{
+  "MarkdownTable": {
+    "prefix": "table",
+    "body": ["|Column1|Column2|", "|:-----:|:-----:|", "| | |"],
+    "description": "MarkdownTable"
+  }
+}
