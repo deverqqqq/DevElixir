@@ -4,10 +4,52 @@
         <title>DevElixir Blog</title>
         <link>https://tech.deverqqqq.dev/blog</link>
         <description>DevElixir Blog</description>
-        <lastBuildDate>Tue, 06 Aug 2024 09:26:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 07 Aug 2024 09:26:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[[Day 5] React State]]></title>
+            <link>https://tech.deverqqqq.dev/blog/react/day-5-react-state</link>
+            <guid>https://tech.deverqqqq.dev/blog/react/day-5-react-state</guid>
+            <pubDate>Wed, 07 Aug 2024 09:26:00 GMT</pubDate>
+            <description><![CDATA[What's React State?]]></description>
+            <content:encoded><![CDATA[<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#9CDCFE;--prism-background-color:#1E1E1E"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#9CDCFE;background-color:#1E1E1E"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">                    ██████╗ ███████╗ █████╗  ██████╗████████╗</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">                    ██╔══██╗██╔════╝██╔══██╗██╔════╝╚══██╔══╝</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">                    ██████╔╝█████╗  ███████║██║        ██║   </span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">                    ██╔══██╗██╔══╝  ██╔══██║██║        ██║   </span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">                    ██║  ██║███████╗██║  ██║╚██████╗   ██║   </span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">                    ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   </span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">                                                             </span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">                        ██████╗  █████╗ ██╗   ██╗    ███████╗</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">                        ██╔══██╗██╔══██╗╚██╗ ██╔╝    ██╔════╝</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">                        ██║  ██║███████║ ╚████╔╝     ███████╗</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">                        ██║  ██║██╔══██║  ╚██╔╝      ╚════██║</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">                        ██████╔╝██║  ██║   ██║       ███████║</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">                        ╚═════╝ ╚═╝  ╚═╝   ╚═╝       ╚══════╝</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">                                                             </span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="whats-react-state">What's React State?<a class="hash-link" aria-label="Direct link to What's React State?" title="Direct link to What's React State?" href="https://tech.deverqqqq.dev/blog/react/day-5-react-state#whats-react-state">​</a></h2>
+<blockquote>
+<p>Components need to “remember” things: the current input value, the current image, the shopping cart.</p>
+</blockquote>
+<blockquote>
+<p>In React, this kind of component-specific memory is called state.</p>
+</blockquote>
+<p>這個元件在整個應用的生命週期內，需要記憶的資訊，被稱為狀態 (State)。<br>
+<!-- -->更新元件的狀態，React 會重新渲染元件，產生新的 Component View。</p>
+<!-- -->
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="controlled-component">Controlled Component<a class="hash-link" aria-label="Direct link to Controlled Component" title="Direct link to Controlled Component" href="https://tech.deverqqqq.dev/blog/react/day-5-react-state#controlled-component">​</a></h2>
+<p>這邊看起來舊版跟新版的文件在理解上可能會有落差，reddit 上面也有不少討論，整理並理解的內容下。</p>
+<ol>
+<li>對於 Parent Component 來說，Child Component 的狀態，因為是內部控制的，沒法透過<code>Props</code>來改變，所以是不可控的。</li>
+<li>對於 input 類來說，DOM 的狀態部沒有被 react 控制，所以沒有使用 state 的 input 是不可控的。</li>
+<li>對於可控的 input，屬於 <code>Controlled Input</code>，反之則是 <code>Uncontrolled Input</code>。</li>
+<li>對於可控的 Component，屬於 <code>Controlled Component</code>，反之則是 <code>Uncontrolled Component</code>。</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="developer-tool">Developer Tool<a class="hash-link" aria-label="Direct link to Developer Tool" title="Direct link to Developer Tool" href="https://tech.deverqqqq.dev/blog/react/day-5-react-state#developer-tool">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="browser-extension">Browser Extension<a class="hash-link" aria-label="Direct link to Browser Extension" title="Direct link to Browser Extension" href="https://tech.deverqqqq.dev/blog/react/day-5-react-state#browser-extension">​</a></h3>
+<p><a href="https://react.dev/learn/react-developer-tools" target="_blank" rel="noopener noreferrer">https://react.dev/learn/react-developer-tools</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="實作建議">實作建議<a class="hash-link" aria-label="Direct link to 實作建議" title="Direct link to 實作建議" href="https://tech.deverqqqq.dev/blog/react/day-5-react-state#%E5%AF%A6%E4%BD%9C%E5%BB%BA%E8%AD%B0">​</a></h2>
+<ol>
+<li><code>StateVariable</code>: 當你需要這個 Component 記憶/追蹤資料，且這個資料可能會在某個時間點發生變化。</li>
+<li><code>A PieceOfState</code>: 當你需要這個 Component 能夠根據某些事件或是操作，動態呈現不一樣的內容。(ex: 透過 isOpen 這個狀態來控制是否要呈現 Conponent 內容)</li>
+<li><code>EventHandler</code>: 當你需要透過狀態改變 Component 的外觀。</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="reference">Reference<a class="hash-link" aria-label="Direct link to Reference" title="Direct link to Reference" href="https://tech.deverqqqq.dev/blog/react/day-5-react-state#reference">​</a></h2>
+<p><a href="https://www.udemy.com/course/the-ultimate-react-course" target="_blank" rel="noopener noreferrer">The Ultimate React Course</a><br>
+<a href="https://react.dev/learn/state-a-components-memory" target="_blank" rel="noopener noreferrer">ReactState</a><br>
+<a href="https://react.dev/learn/sharing-state-between-components#controlled-and-uncontrolled-components" target="_blank" rel="noopener noreferrer">Controlled &amp; UnControlled</a><br>
+<a href="https://www.reddit.com/r/reactjs/comments/17homhu/has_react_changed_the_meaning_of/" target="_blank" rel="noopener noreferrer">Has React changed the meaning of uncontrolled/controlled components?</a></p>]]></content:encoded>
+            <category>React</category>
+            <category>ZeroToHero</category>
+        </item>
         <item>
             <title><![CDATA[[Day 4] React Fragment]]></title>
             <link>https://tech.deverqqqq.dev/blog/react/day-4-react-fragment</link>
