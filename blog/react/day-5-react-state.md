@@ -79,6 +79,16 @@ https://react.dev/learn/react-developer-tools
 2. `A PieceOfState`: 當你需要這個 Component 能夠根據某些事件或是操作，動態呈現不一樣的內容。(ex: 透過 isOpen 這個狀態來控制是否要呈現 Conponent 內容)
 3. `EventHandler`: 當你需要透過狀態改變 Component 的外觀。
 
+## State vs Props
+
+|           State            |           Props           |
+| :------------------------: | :-----------------------: |
+|       Internal Data        |       External Data       |
+|      Component Memory      |    Function Parameters    |
+|   Can be updated by self   |         Read-Only         |
+|  StateChanged-> Re-Render  |                           |
+| Make Component Interactive | Configure Child Component |
+
 ## Reference
 [The Ultimate React Course](https://www.udemy.com/course/the-ultimate-react-course)  
 [ReactState](https://react.dev/learn/state-a-components-memory)  
