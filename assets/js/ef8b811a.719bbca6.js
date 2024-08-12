@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[8947],{6600:e=>{e.exports=JSON.parse('{"authors":[{"name":"deverqqqq","url":"https://github.com/deverqqqq","imageURL":"https://github.com/deverqqqq.png","key":"deverqqqq","page":null,"count":8}]}')}}]);
