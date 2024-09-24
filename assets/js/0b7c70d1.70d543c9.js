@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[1303],{644:e=>{e.exports=JSON.parse('{"categoryGeneratedIndex":{"title":"Test","slug":"/category/test","permalink":"/category/test","sidebar":"dotnetSidebar","navigation":{"previous":{"title":"Mappers","permalink":"/dotnet/mapper"},"next":{"title":"Mindmap","permalink":"/dotnet/test/"}}}}')}}]);
