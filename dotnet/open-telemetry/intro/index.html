@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-dotnet/open-telemetry/intro" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.5.2">
+<title data-rh="true">探索 OpenTelemetry - 分布式追踪與觀測 | DevElixir</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://tech.deverqqqq.dev/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://tech.deverqqqq.dev/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://tech.deverqqqq.dev/dotnet/open-telemetry/intro"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="探索 OpenTelemetry - 分布式追踪與觀測 | DevElixir"><meta data-rh="true" name="description" content="OpenTelemetry"><meta data-rh="true" property="og:description" content="OpenTelemetry"><meta data-rh="true" name="keywords" content="OpenTelemetry"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://tech.deverqqqq.dev/dotnet/open-telemetry/intro"><link data-rh="true" rel="alternate" href="https://tech.deverqqqq.dev/dotnet/open-telemetry/intro" hreflang="en"><link data-rh="true" rel="alternate" href="https://tech.deverqqqq.dev/dotnet/open-telemetry/intro" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="DevElixir RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="DevElixir Atom Feed">
+
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NSENBHQE50"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-NSENBHQE50",{anonymize_ip:!0})</script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.8996782c.css">
+<script src="/assets/js/runtime~main.59f9b245.js" defer="defer"></script>
+<script src="/assets/js/main.ab388d46.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"dark")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/favicon.ico" alt="DevElixir" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/favicon.ico" alt="DevElixir" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">DevElixir</b></a><a class="navbar__item navbar__link" href="/category/solid">Pattern</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/category/c-1">Tech</a><a class="navbar__item navbar__link" href="/dev-ops/intro">DevOps</a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/blog">Blog</a><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link">Projects</a><ul class="dropdown__menu"><li><a href="https://github.com/deverqqqq/dotnet-templates" target="_blank" rel="noopener noreferrer" class="dropdown__link">dotnet-template<svg width="12" height="12" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><a href="https://github.com/deverqqqq" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently dark mode)" aria-label="Switch between dark and light mode (currently dark mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/category/c-1">.Net</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/category/c-1">C#</a><button aria-label="Expand sidebar category &#x27;C#&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/dotnet/mapper">Mappers</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/category/test-1">Test</a><button aria-label="Expand sidebar category &#x27;Test&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/category/template-1">Template</a><button aria-label="Expand sidebar category &#x27;Template&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" tabindex="0" href="/category/opentelemetry-1">OpenTelemetry</a><button aria-label="Collapse sidebar category &#x27;OpenTelemetry&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/dotnet/open-telemetry/intro">探索</a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/mq/intro">Message Queue</a></div></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">.Net</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/category/opentelemetry-1"><span itemprop="name">OpenTelemetry</span></a><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">探索</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>探索 OpenTelemetry - 分布式追踪與觀測</h1></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="遙測的重要性和基本概念">遙測的重要性和基本概念<a href="#遙測的重要性和基本概念" class="hash-link" aria-label="Direct link to 遙測的重要性和基本概念" title="Direct link to 遙測的重要性和基本概念">​</a></h2>
+<p>在單體架構中，追蹤問題可能是相對簡單的，因為所有的邏輯和操作都集中在一個應用中。然而，現代應用程式越來越多地使用微服務架構，又或者是服務導向架構，一個 Request 可能會經過數十個甚至上百個服務。這使得問題的追蹤和定位變得困難且耗時。</p>
+<p>如果一個 Request 回應時間比預期要長，問題可能發生在其中某一個服務、數據庫查詢或是第三方 API 上。如果沒有合適的遙測工具，這樣的問題可能會變得非常難以排查。</p>
+<p>OpenTelemetry 可以建立這樣的能力：</p>
+<ol>
+<li>快速定位問題：透過 Tracing，你能夠看到 Request 在不同服務間的傳遞，並了解哪個步驟時間成本最高。</li>
+<li>量化系統性能：使用 Metrics 來跟蹤你的服務是否按預期運行，並在超出範圍時觸發告警。</li>
+<li>故障診斷：通過 Logs 和 Tracing 的結合，快速了解問題發生時的上下文，幫助快速釐清錯誤。</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="背景與歷史">背景與歷史<a href="#背景與歷史" class="hash-link" aria-label="Direct link to 背景與歷史" title="Direct link to 背景與歷史">​</a></h3>
+<p>在 OpenTelemetry 問世之前，已有幾個知名的監控工具 (還有各種程式語言的 Profiler 工具)，例如：</p>
+<ol>
+<li>OpenTracing：提供統一的 API，用於 Tracing，讓開發者能夠在多個追蹤系統之間互操作。</li>
+<li>OpenCensus：Google 開發的一個收集 Tracing 和 Metrics 的框架，旨在提供跨服務和應用的性能監控。</li>
+</ol>
+<p>因為不同的工具和數據格式，常常會因為數據規格不兼容，導致被特定的平台或是工具所綁定。因此，社區決定合併這兩個項目，並創建 OpenTelemetry 這個統一標準。此外，隨著雲原生架構的興起，系統的複雜性越來越高，企業迫切需要一個可以適應多種環境的標準化解決方案。</p>
+<p>OpenTelemetry 不僅解決了這些問題，還提供了靈活的架構，可以擴展到不同的監控後端系統。</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>單體應用中的 OpenTelemetry</div><div class="admonitionContent_BuS1"><p>雖然 OpenTelemetry 對於分散式架構或微服務系統特別有用，但在單體應用中使用它同樣能帶來顯著好處。以下是單體應用中使用 OpenTelemetry 的幾個優勢：</p><ol>
+<li>統一架構：提供統一的遙測數據收集方法，減少使用多個工具帶來的開發和運維負擔。</li>
+<li>性能分析：追蹤應用內部不同模組或功能之間的互動，幫助發現應用中的性能問題。</li>
+<li>未來擴展：如果需要將應用擴展為微服務架構，使用 OpenTelemetry 可以使轉型過程更加平滑，開發者可以輕鬆地將現有的遙測機制擴展到分散式系統中。</li>
+<li>故障診斷：即便在單體系統中，也可以有效地捕捉錯誤發生的具體路徑和上下文，幫助開發者更快速地進行問題定位和修復。</li>
+</ol><p>  因此，不管應用是單體還是分散式，OpenTelemetry 提供的遙測能力都能帶來顯著的效益，更好地管理其服務的運行狀態和性能。</p></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="架構">架構<a href="#架構" class="hash-link" aria-label="Direct link to 架構" title="Direct link to 架構">​</a></h3>
+<ol>
+<li>
+<p>統一的 API 和多種 SDK 支援<br>
+<!-- -->統一的 API，意味著只需要學習一套標準化的 API 來收集遙測數據，不會因為不同的開發語言產生額外學習的成本。</p>
+</li>
+<li>
+<p>跨平台<br>
+<!-- -->無論你是在本地部署的服務，還是運行在雲端平台，都能夠使用。<br>
+<!-- -->同時支持虛擬機、容器化環境以及無伺服器架構，讓開發者可以輕鬆地收集和導出觀察性數據，無需為不同的運行環境使用不同的工具。</p>
+</li>
+<li>
+<p>彈性與可擴展性<br>
+<!-- -->不僅能夠滿足小型應用的需求，也能夠處理大規模分散式系統中的高流量數據。</p>
+</li>
+<li>
+<p>模組化設計<br>
+<!-- -->API、SDK 和 Collector 分開，可以根據應用需求靈活選擇需要的模組，而不必全部導入。</p>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Example</div><div class="admonitionContent_BuS1"><p>如果你只需要追蹤功能，你可以僅使用 Tracing 部分，而不需要引入完整的遙測功能。</p></div></div>
+<ol start="5">
+<li>Sampling Strategies(採樣策略)<br>
+<!-- -->可以根據系統負載情況設置不同的采樣率。</li>
+</ol>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Example</div><div class="admonitionContent_BuS1"><p>例如，在流量高峰期，你可以選擇只追蹤 10% 的請求數據，而在流量較低的時段則可以追蹤更多請求。</p></div></div>
+<ol start="7">
+<li>
+<p>第三方工具兼容
+充分考慮到了與其他遙測工具的兼容性。<br>
+<!-- -->目前許多不同的遙測平台 (如 Jaeger、Prometheus、Grafana)，都可以正常運作。</p>
+</li>
+<li>
+<p>開放標準與社區支持<br>
+<!-- -->OpenTelemetry 是一個由 CNCF 支持的開源項目，這使得它具有極大的兼容性和持續發展潛力。</p>
+</li>
+</ol>
+<ul>
+<li>廠商中立：OpenTelemetry 是一個開放的標準，這意味著它不會綁定到某一個特定的供應商或平台。</li>
+<li>強大的社區支持：作為 CNCF 下的一個項目，OpenTelemetry 得到了來自全球眾多開發者和公司的支持。</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="三大支柱">三大支柱<a href="#三大支柱" class="hash-link" aria-label="Direct link to 三大支柱" title="Direct link to 三大支柱">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tracing-分佈式追蹤">Tracing (分佈式追蹤)<a href="#tracing-分佈式追蹤" class="hash-link" aria-label="Direct link to Tracing (分佈式追蹤)" title="Direct link to Tracing (分佈式追蹤)">​</a></h3>
+<p>Tracing 是理解複雜分散式系統中 Request 路徑的核心工具。能夠讓維運人員清楚地看到每個 Request 在多個服務之間的傳遞，並記錄每個步驟的執行時間。這樣你可以很容易地找出系統中的性能瓶頸或失敗的節點。</p>
+<p>在 OpenTelemetry 中，Tracing 是通過 Traces 和 Spans 來實現的：</p>
+<p>Trace：是一個 Request 或工作流程的全局表示，代表從開始到結束的整個過程。它可能包括跨多個服務或應用程式。
+Span：是一個 Trace 的基本構成單位。每個 Span 包含操作的名稱、開始和結束時間、參數（如標籤、事件）等。可以嵌套在彼此之中，這樣能清楚地表現出各個步驟的層次結構和相互依賴關係。</p>
+<p><img decoding="async" loading="lazy" src="/assets/images/2024-10-08-11-26-44-69bd2dfee2ff6ababf0465dc1ff40d66.png" width="800" height="546" class="img_ev3q"><br>
+<img decoding="async" loading="lazy" src="/assets/images/2024-10-08-11-28-32-6bfac5c1c6f4b61a74bb1d7555da9460.png" width="800" height="336" class="img_ev3q"></p>
+<p>適用場景：</p>
+<ul>
+<li>性能瓶頸分析</li>
+<li>跨服務故障排查/定位</li>
+<li>用戶 Request 路徑可視化</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="metrics-指標">Metrics (指標)<a href="#metrics-指標" class="hash-link" aria-label="Direct link to Metrics (指標)" title="Direct link to Metrics (指標)">​</a></h3>
+<p>Metrics 是用來量化系統的健康狀況與性能表現。Metrics 通常以數值的形式出現，並且可以是瞬時值或累積值，例如 CPU 使用率、回應時間、錯誤率、RPS...等。</p>
+<ul>
+<li>Counter：只會增長的指標，通常用來測量系統中某些事件的次數。例如，HTTP Request 的總數或錯誤次數。</li>
+<li>Sums：類似於 Counter，但它更靈活，允許開發者在特定場景下也可以進行減少操作。例如，活躍連接數。</li>
+<li>Gauge：可以增減的指標，通常反映系統的當前狀態。可能包含，CPU 使用率、記憶體使用量...等。</li>
+<li>Histogram：將數據分布到不同的範圍中，幫助你了解數據的分布情況。例如，HTTP 回應時間的分布。</li>
+<li>Summary：類似於直方圖，但它提供的是特定數據的統計。</li>
+</ul>
+<p><img decoding="async" loading="lazy" src="/assets/images/2024-10-08-11-48-44-32ab4157f5e0c99c24b904931a68eee4.png" width="934" height="417" class="img_ev3q"><br>
+<img decoding="async" loading="lazy" src="/assets/images/2024-10-08-11-49-02-526a5207486532814c597757c85ff0d7.png" width="957" height="548" class="img_ev3q"><br>
+<img decoding="async" loading="lazy" src="/assets/images/2024-10-08-11-49-18-2656546aeef9e4cd77500f1bd4771f05.png" width="962" height="453" class="img_ev3q"></p>
+<p>適用場景：</p>
+<ul>
+<li>系統狀態監控：通過監控應用的各種 Metrics，並在數值超出預設範圍時自動觸發告警。</li>
+<li>資源規劃：監控系統的資源使用情況，從而進行合理的容量規劃。</li>
+<li>性能趨勢：分析系統的性能趨勢，提前預測和解決可能出現的性能瓶頸。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="logs-日誌">Logs (日誌)<a href="#logs-日誌" class="hash-link" aria-label="Direct link to Logs (日誌)" title="Direct link to Logs (日誌)">​</a></h3>
+<p>Logs 是系統在特定時刻的具體事件和行為，通常用於排查錯誤和了解系統在特定時間的運行狀態。可以捕捉每個 Request 處理的詳細資訊，包括 Request 參數、處理過程中的上下文數據以及發生錯誤時的詳細內容。</p>
+<p>Logs 的典型使用場景包括：</p>
+<ul>
+<li>故障診斷：當系統出現錯誤時，提供詳細的錯誤上下文和具體的錯誤訊息，快速定位問題。</li>
+<li>事件追溯：通過 Logs 了解某些事件發生的背景和流程，找出系統中的異常行為。</li>
+<li>審計：Logs 記錄了系統中的重要事件，可用於後期的安全審計和風險分析。</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="相輔相成">相輔相成<a href="#相輔相成" class="hash-link" aria-label="Direct link to 相輔相成" title="Direct link to 相輔相成">​</a></h2>
+<p>遙測整體性的一個核心點是，三大支柱並不是彼此獨立的工具或方法，而是從不同角度提供關鍵數據，互為補充，從而幫助開發者更高效地診斷問題並優化系統。</p>
+<p><img decoding="async" loading="lazy" src="/assets/images/2024-10-08-12-02-30-3a1f105d3aae85b72868d27963b0d00f.png" width="484" height="373" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tracing--metrics">Tracing + Metrics<a href="#tracing--metrics" class="hash-link" aria-label="Direct link to Tracing + Metrics" title="Direct link to Tracing + Metrics">​</a></h3>
+<p>Tracing 可以用來記錄一個 Request 不同服務之間的完整路徑，並追蹤每個步驟的時間成本。但僅靠 Tracing，只能知道特定的 Request 或是某個情境下的某一個步驟耗時較多，對於在整個系統中的影響難以評估。</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>說明</div><div class="admonitionContent_BuS1"><p>某個查詢操作耗時 500ms，但這只是單一請求的數據。如果 Metrics 顯示，這樣的查詢操作每秒發生上千次，那麼這個耗時的問題就變得非常重要，因為它會嚴重影響系統的整體性能。<br>
+<!-- -->反之，如果這樣的操作在整體系統查詢的 Request 內，僅佔據極少部分，那該問題的優先度也許就沒那麼急迫。</p><p>這樣的數據可以幫助開發者不僅看到問題所在，還能衡量問題的嚴重性。</p></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tracing--logs">Tracing + Logs<a href="#tracing--logs" class="hash-link" aria-label="Direct link to Tracing + Logs" title="Direct link to Tracing + Logs">​</a></h3>
+<p>Tracing 可以用來記錄一個 Request 不同服務之間的完整路徑，並顯示哪些服務出現了問題，但它可能無法提供詳細的錯誤上下文。這時候，詳細的 Logs 數據可以提供更多有關錯誤的具體訊息，包括錯誤的根本原因、當時的系統狀態、上下文等。</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>說明</div><div class="admonitionContent_BuS1"><p>某個服務在特定的 API 呼叫發生了錯誤，但 Logs 會提供具體的錯誤訊息，比如具體的 Stacks、錯誤代碼、以及當時的上下文狀態，讓你能夠進一步深入診斷問題。
+這樣，當出現問題時，你不僅能夠知道錯誤發生在哪個服務或哪個模塊，還可以快速深入了解問題的細節。</p></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="metrics--logs">Metrics + Logs<a href="#metrics--logs" class="hash-link" aria-label="Direct link to Metrics + Logs" title="Direct link to Metrics + Logs">​</a></h3>
+<p>Metrics 提供了一個全局的系統狀態總覽，例如系統的 CPU 使用率、記憶體使用、Request 數量等。當某些 Metrics 異常時，開發者可以進一步利用 Logs 來深入了解具體的異常原因。</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>說明</div><div class="admonitionContent_BuS1"><p>某個 API 的回應時間異常增高，這可能暗示出現了性能瓶頸，或者某個服務正在面臨壓力。此時，開發者可以根據這些異常 Metrics，查看具體的 Logs，進一步排查問題。<br>
+<!-- -->通過 Metrics，你可以高效地監控整個系統的運行狀態，而 Logs 則幫助你對具體異常情況進行深入分析和回溯。</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="總結">總結<a href="#總結" class="hash-link" aria-label="Direct link to 總結" title="Direct link to 總結">​</a></h2>
+<p>遙測的整體性意味著 Tracing、Metrics 和 Logs 是相輔相成、互相補充的。它們為開發者提供了從高層次到細節的全方位監控能力，使問題排查、性能優化以及故障修復過程變得更加高效。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="reference">Reference<a href="#reference" class="hash-link" aria-label="Direct link to Reference" title="Direct link to Reference">​</a></h2>
+<p><a href="https://opentelemetry.io/docs/specs/otel/metrics/data-model/" target="_blank" rel="noopener noreferrer">https://opentelemetry.io/docs/specs/otel/metrics/data-model/</a><br>
+<a href="https://dev.to/siddhantkcode/the-mechanics-of-distributed-tracing-in-opentelemetry-1ohk" target="_blank" rel="noopener noreferrer">https://dev.to/siddhantkcode/the-mechanics-of-distributed-tracing-in-opentelemetry-1ohk</a><br>
+<a href="https://dev.to/amplication/distributed-tracing-and-opentelemetry-guide-8b6" target="_blank" rel="noopener noreferrer">https://dev.to/amplication/distributed-tracing-and-opentelemetry-guide-8b6</a><br>
+<a href="https://microsoft.github.io/code-with-engineering-playbook/observability/log-vs-metric-vs-trace/" target="_blank" rel="noopener noreferrer">https://microsoft.github.io/code-with-engineering-playbook/observability/log-vs-metric-vs-trace/</a></p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-tags-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a class="tag_zVej tagRegular_sFm0" href="/tags/open-telemetry">OpenTelemetry</a></li></ul></div></div><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/deverqqqq/DevElixir/tree/main/docs/dotnet/open-telemetry/00_intro.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/category/opentelemetry-1"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">OpenTelemetry</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/mq/intro"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">介紹</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#遙測的重要性和基本概念" class="table-of-contents__link toc-highlight">遙測的重要性和基本概念</a><ul><li><a href="#背景與歷史" class="table-of-contents__link toc-highlight">背景與歷史</a></li><li><a href="#架構" class="table-of-contents__link toc-highlight">架構</a></li></ul></li><li><a href="#三大支柱" class="table-of-contents__link toc-highlight">三大支柱</a><ul><li><a href="#tracing-分佈式追蹤" class="table-of-contents__link toc-highlight">Tracing (分佈式追蹤)</a></li><li><a href="#metrics-指標" class="table-of-contents__link toc-highlight">Metrics (指標)</a></li><li><a href="#logs-日誌" class="table-of-contents__link toc-highlight">Logs (日誌)</a></li></ul></li><li><a href="#相輔相成" class="table-of-contents__link toc-highlight">相輔相成</a><ul><li><a href="#tracing--metrics" class="table-of-contents__link toc-highlight">Tracing + Metrics</a></li><li><a href="#tracing--logs" class="table-of-contents__link toc-highlight">Tracing + Logs</a></li><li><a href="#metrics--logs" class="table-of-contents__link toc-highlight">Metrics + Logs</a></li></ul></li><li><a href="#總結" class="table-of-contents__link toc-highlight">總結</a></li><li><a href="#reference" class="table-of-contents__link toc-highlight">Reference</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 DevElixir. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
