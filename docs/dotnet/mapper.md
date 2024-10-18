@@ -3,7 +3,7 @@ title: "Mappers"
 sidebar_label: Mappers
 keywords: [Mapper, 'Object Mapping']
 description: dotnet Object Mapping
-sidebar_position: 2
+sidebar_position: 6
 tags: [Mapper]
 ---
 
