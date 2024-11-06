@@ -31,4 +31,4 @@ tags: [algo, complexity]
    例如，有兩個算法的時間複雜度相同，都是屬於常數，不管資料量有多少，執行時間都不會受到影響，但有可能這兩個的固定執行時間差很多，所以無法單純透過時間複雜度來做判斷。
 
 ## Reference
-https://www.hello-algo.com/chapter_computational_complexity/time_complexity/  
+https://www.hello-algo.com/zh-hant/chapter_computational_complexity/time_complexity/
