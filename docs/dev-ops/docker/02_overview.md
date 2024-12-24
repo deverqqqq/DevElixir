@@ -3,7 +3,7 @@ title: "Docker Overview"
 sidebar_label: Docker Overview
 keywords: ["docker"]
 description: Overview
-sidebar_position: 1
+sidebar_position: 2
 tags: [docker]
 ---
 
@@ -52,11 +52,11 @@ Shim 為 containerd 和 runc 之間提供了一個抽象層，使容器成為 Da
 
 
 ### RUNC
-runc是實際建立和執行容器的底層 runtime。它是根據 OCI 規範實現的，確保了容器的標準化。  
-runc負責處理容器的所有細節，如設置命名空間、控制組、掛載文件系統等。
+runc 是實際建立和執行容器的底層 runtime。它是根據 OCI 規範實現的，確保了容器的標準化。  
+runc 負責處理容器的所有細節，如設置命名空間、控制組、掛載文件系統等。
 
 ## Docker Image
-Docker Image 可以將其理解為一組 vm-template，裡面包含啟動應用所需的內容。  
+Docker Image 可以將其理解為一組 vm-template，裡面包含啟動應用所需的內容。(ReadOnly)  
 Docker 可以透過這個 Image 來啟動一組或是多組的應用。
 
 Docker Image 的多層結構允許層之間的共享和重用。每一層都有自己的 Hash Value，當我們 pull image 下來時，會檢查 layer 是否已經存在，就不需要再 pull 下來。  
@@ -88,6 +88,50 @@ Docker Image 的多層結構允許層之間的共享和重用。每一層都有�
 透過這兩個資訊，可以知道對應不同架構下，需要的不同 Layer 資訊，從而透過一個 image，建立不同架構下的應用程式。
 
 ![](img/2024-06-11-12-08-42.png)
+
+### 命名和標籤
+
+![](img/2024-12-23-12-06-24.png)
+
+## Docker Continaer
+
+![](img/2024-12-23-13-56-53.png)
+
+### 虛擬機 vs 容器
+
+| VirtualMachine | Container      |
+| -------------- | -------------- |
+| 對硬體做虛擬化 | 對 OS 做虛擬化 |
+| 啟動時間長     | 啟動時間短     |
+| 攻擊面較大     | 攻擊面較小     |
+
+## 佈署和管理容器
+
+| Docker Compose                       | Docker Swarm       | Docker Stack                      |
+| ------------------------------------ | ------------------ | --------------------------------- |
+| 透過 YAML 檔設定，減少冗長的 command | 可擴展的容器集群   | 結合 Compose 和 Swarm 的特性      |
+| 單台主機上面的容器管理               | 提供高可用和高擴展 | 可以使用 Compose 格式檔案佈署到集群 |
+| 不適合用於大規模佈署                 |                    |                                   |
+
+
+## Docker Network
+
+Docker Network 提供了多種 Network 模式，可以根據需求彈性地配置容器間的通訊方式。
+
+| Host                         | Birdge Networks                                        | Overlay Network                 | None             |
+| ---------------------------- | ------------------------------------------------------ | ------------------------------- | ---------------- |
+| 與主機共享相同的網路介面和埠 | 類似區域網路 (最常見的類型)                            | 類似 VPN，可以跨不同的主機通訊  | 容器不含網路功能 |
+|                              | 可以建立自定義的 BridgeNetwork，限制不同組容器間的通訊 | 可以使用 TLS 加密來保護網路流量 |                  |
+
+## Volumn
+
+Volume 是一個獨立於容器生命週期的儲存空間，讓容器可以儲存持久性資料。它就像是容器的外部硬碟，即使容器被刪除，Volume 和其中的資料仍然會保留下來。
+
+### 特點
+
+- 獨立性：Volume 是獨立的物件，不受容器生命週期的影響。
+- 靈活性：可以將 Volume 映射到專用的外部儲存系統，例如雲端或地端的儲存設備。
+- 共享性：不同容器可以透過 Volume 來存取和共用相同的資料。
 
 ## Reference
 https://leanpub.com/dockerdeepdive
