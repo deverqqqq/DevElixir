@@ -47,4 +47,5 @@ public async Task<string> GetDataAsync()
 [.NET 7](https://devblogs.microsoft.com/dotnet/performance_improvements_in_net_7/)  
 [.NET 8](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/)  
 [.NET 9](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-9/)  
+[.NET 10](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-10/)  
 :::

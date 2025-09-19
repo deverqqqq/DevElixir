@@ -67,13 +67,19 @@ var result = mapper.Map<AddressDto>(datas);
 
 ## AutoMapper
 
-[Github](https://github.com/AutoMapper/AutoMapper)
+[Github](https://github.com/LuckyPennySoftware/AutoMapper)
+[Github-Archive](https://github.com/automapper/automapper.archive)
+[新版授權](https://www.jimmybogard.com/automapper-and-mediatr-commercial-editions-launch-today/)
 
 1. 需設定物件映射定義：`Profile`, `MapperConfiguration`
 2. 需要使用 Mapper 實體：可以透過 DI Register 註冊，或是透過 MapperConfiguration instance call `CreateMapper`。
 
 :::info
 在 version 13.0 之後，不再需要額外安裝 DependencyInjection 套件，已經被整併進套件 Core 內。
+:::
+
+:::warning
+在 version 15.0 之後，作者調整原授權，使用上需確認授權是否符合需求。
 :::
 
 <Tabs>
@@ -234,7 +240,7 @@ public static partial class AddressStaticMapper
 
 依照我自身的使用情境
 
-Mapperly > Mapster >> AutoMapper >> Manual
+Mapperly > Mapster >> Manual > AutoMapper
 
 ### Tradeoff
 
@@ -243,12 +249,12 @@ Mapperly > Mapster >> AutoMapper >> Manual
 3. Mapperly 效能最好。
 4. Mapster 無須設定即可使用，開發效率上最快最方便。
 
-| Package    | Usability  | Performance |
-| ---------- | :--------: | :---------: |
-| Mapperly   |  ⭐⭐⭐⭐  | ⭐⭐⭐⭐⭐  |
-| Mapster    | ⭐⭐⭐⭐⭐ |  ⭐⭐⭐⭐   |
-| AutoMapper |   ⭐⭐⭐   |   ⭐⭐⭐    |
-| Manual     |     ⭐     | ⭐⭐⭐⭐⭐  |
+| Package    | Usability  | Performance |              License              |
+| ---------- | :--------: | :---------: | :-------------------------------: |
+| Mapperly   |  ⭐⭐⭐⭐  | ⭐⭐⭐⭐⭐  |        Apache License 2.0         |
+| Mapster    | ⭐⭐⭐⭐⭐ |  ⭐⭐⭐⭐   |            MIT License            |
+| AutoMapper |   ⭐⭐⭐   |   ⭐⭐⭐    | 從 v15 開始調整授權，需要商業付費 |
+| Manual     |     ⭐     | ⭐⭐⭐⭐⭐  |                                   |
 
 ## 延伸閱讀
 [AutoMapper's Design Philosophy](https://www.jimmybogard.com/automappers-design-philosophy/)  
