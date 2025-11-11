@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus=globalThis.webpackChunkdocusaurus||[]).push([[9092],{61885:a=>{a.exports=JSON.parse('{"tag":{"label":"Mapper","permalink":"/tags/mapper","allTagsPath":"/tags","count":1,"items":[{"id":"dotnet/mapper","title":"Mappers","description":"dotnet Object Mapping","permalink":"/dotnet/mapper"}],"unlisted":false}}')}}]);

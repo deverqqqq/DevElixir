@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[8121],{68070:e=>{e.exports=JSON.parse('{"tags":[{"label":"React","permalink":"/blog/tags/react","count":8},{"label":"ZeroToHero","permalink":"/blog/tags/zero-to-hero","count":8}]}')}}]);

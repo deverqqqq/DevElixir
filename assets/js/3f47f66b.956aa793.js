@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus=globalThis.webpackChunkdocusaurus||[]).push([[1795],{52867:a=>{a.exports=JSON.parse('{"tag":{"label":"RabbitMQ","permalink":"/tags/rabbit-mq","allTagsPath":"/tags","count":1,"items":[{"id":"mq/rabbitmq/concept","title":"RabbitMQ Concept","description":"RabbitMQ Concept","permalink":"/mq/rabbitmq/concept"}],"unlisted":false}}')}}]);
