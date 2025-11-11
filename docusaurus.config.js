@@ -146,6 +146,12 @@ const config = {
             position: 'left',
             label: 'DevOps',
           },
+          {
+            type: 'docSidebar',
+            sidebarId: 'aiSidebar',
+            position: 'left',
+            label: 'AI',
+          },
           {to: '/blog', label: 'Blog', position: 'right'},
           {
             type: 'dropdown',
