@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ai/prompt" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Prompt Engineering | DevElixir</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://tech.deverqqqq.dev/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://tech.deverqqqq.dev/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://tech.deverqqqq.dev/ai/prompt"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Prompt Engineering | DevElixir"><meta data-rh="true" name="description" content="提示工程 (Prompt Engineering) 如何影響 LLM 理解使用者輸入的問題"><meta data-rh="true" property="og:description" content="提示工程 (Prompt Engineering) 如何影響 LLM 理解使用者輸入的問題"><meta data-rh="true" name="keywords" content="Prompt"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://tech.deverqqqq.dev/ai/prompt"><link data-rh="true" rel="alternate" href="https://tech.deverqqqq.dev/ai/prompt" hreflang="en"><link data-rh="true" rel="alternate" href="https://tech.deverqqqq.dev/ai/prompt" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Prompt Engineering","item":"https://tech.deverqqqq.dev/ai/prompt"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="DevElixir RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="DevElixir Atom Feed">
+
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NSENBHQE50"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-NSENBHQE50",{anonymize_ip:!0})</script>
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.f5264b25.css">
+<script src="/assets/js/runtime~main.0c09934c.js" defer="defer"></script>
+<script src="/assets/js/main.13ace477.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/favicon.ico"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/favicon.ico" alt="DevElixir" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/favicon.ico" alt="DevElixir" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">DevElixir</b></a><a class="navbar__item navbar__link" href="/category/solid">Pattern</a><a class="navbar__item navbar__link" href="/dotnet/overview">Tech</a><a class="navbar__item navbar__link" href="/category/docker">DevOps</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/ai/intro">AI</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/blog">Blog</a><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link">Projects</a><ul class="dropdown__menu"><li><a href="https://github.com/deverqqqq/dotnet-templates" target="_blank" rel="noopener noreferrer" class="dropdown__link">dotnet-template<svg width="12" height="12" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><a href="https://github.com/deverqqqq" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ai/intro"><span title="Overview" class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/ai/prompt"><span title="Prompt Engineering" class="linkLabel_WmDU">Prompt Engineering</span></a></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Prompt Engineering</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Prompt Engineering</h1></header><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="提示工程-prompt-engineering">提示工程 (Prompt Engineering)<a href="#提示工程-prompt-engineering" class="hash-link" aria-label="Direct link to 提示工程 (Prompt Engineering)" title="Direct link to 提示工程 (Prompt Engineering)" translate="no">​</a></h2>
+<p>目前的 LLM 本質上還是機率模型，所以要如何透過所謂的提示詞 (Prompt)，提供模型我們想要回覆的預期方向，讓模型能夠猜的更準，變成使用AI的第一個要掌握的重點。</p>
+<p>當我們將觀念從傳統的 <strong>指令</strong> 改為 <strong>提示詞</strong>，自然也就衍生出常見的 Pattern。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="pattern">Pattern<a href="#pattern" class="hash-link" aria-label="Direct link to Pattern" title="Direct link to Pattern" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="角色提示">角色提示<a href="#角色提示" class="hash-link" aria-label="Direct link to 角色提示" title="Direct link to 角色提示" translate="no">​</a></h3>
+<ul>
+<li class="">定義：賦予一個專家角色，模型會優先使用與該角色相關的背景知識、語氣、和思考模式。</li>
+<li class="">範例：<!-- -->
+<blockquote>
+<p>你是一位擁有 20 年經驗的美食作家，擅長將複雜概念的味覺感受轉化成文字描述。</p>
+</blockquote>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="上下文提示">上下文提示<a href="#上下文提示" class="hash-link" aria-label="Direct link to 上下文提示" title="Direct link to 上下文提示" translate="no">​</a></h3>
+<ul>
+<li class="">定義：完成這個任務/目標，模型需要知道的基本上下文(脈絡)。</li>
+<li class="">範例：<!-- -->
+<blockquote>
+<p>這份報告的目標讀者是沒有咖啡豆背景知識的潛在投資者，所以請避免使用過多專業術語。報告的重點應放在市場規模、主要參與者和潛在風險上。</p>
+</blockquote>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="限制提示">限制提示<a href="#限制提示" class="hash-link" aria-label="Direct link to 限制提示" title="Direct link to 限制提示" translate="no">​</a></h3>
+<ul>
+<li class="">定義：避免模型過於發散，明確規定輸出的風格、語氣、篇幅，甚至是格式(ex: markdown, xml...)。</li>
+<li class="">範例：<!-- -->
+<blockquote>
+<p>正向: 請用一種熱情、活潑、充滿鼓勵的語氣來撰寫這封歡迎新員工的郵件，全文不得超過 100 字。<br>
+<!-- -->反向: 請為我比較 A 和 B 兩款手機的優缺點。請<strong>不要考慮價格</strong>因素，只專注於<strong>硬體規格</strong>和<strong>用戶體驗</strong>。</p>
+</blockquote>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="範例提示">範例提示<a href="#範例提示" class="hash-link" aria-label="Direct link to 範例提示" title="Direct link to 範例提示" translate="no">​</a></h3>
+<ul>
+<li class="">定義：透過小且精確的範例，讓模型直接當作參考依據。</li>
+<li class="">範例：<!-- -->
+<blockquote>
+<p>請將最終結果以下方形式呈現：<br>
+<!-- -->品項：xxx咖啡豆<br>
+<!-- -->產地：來自衣索比亞的單一產區。<br>
+<!-- -->特點：豐富的花香和柑橘風味。</p>
+</blockquote>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="翻轉提示">翻轉提示<a href="#翻轉提示" class="hash-link" aria-label="Direct link to 翻轉提示" title="Direct link to 翻轉提示" translate="no">​</a></h3>
+<ul>
+<li class="">定義：當你自己也不完全清楚完成任務需要哪些資訊時，可以利用這個模式，讓 AI 扮演專家的角色，來引導您提供必要的資</li>
+<li class="">範例：<!-- -->
+<blockquote>
+<p>你是一位資深的商業分析師(Business Analyst)。擅長引導客戶進行需求探索。我們的共同目標是透過一系列的對話討論，為一個新的商業提案做出分析報告。</p>
+</blockquote>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="系統提示詞-vs-使用者提示詞">系統提示詞 vs 使用者提示詞<a href="#系統提示詞-vs-使用者提示詞" class="hash-link" aria-label="Direct link to 系統提示詞 vs 使用者提示詞" title="Direct link to 系統提示詞 vs 使用者提示詞" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="系統提示詞">系統提示詞<a href="#系統提示詞" class="hash-link" aria-label="Direct link to 系統提示詞" title="Direct link to 系統提示詞" translate="no">​</a></h3>
+<p>定義 AI 對話的核心，包含角色、個性、行為準則和長期目標，且會在整個任務中持續生效。</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>你是一位名叫「數學小老師」的 AI 家教。<br>
+<!-- -->你的任務是：</p><ol>
+<li class="">只回答國小六年級以下的數學問題。</li>
+<li class="">如果問題超出範圍，要禮貌地拒絕，並說明你的專長是國小數學。</li>
+<li class="">解釋問題時，要使用生動的比喻，讓小朋友容易理解。</li>
+<li class="">絕對不能直接給出答案，必須先引導小朋友思考。</li>
+</ol></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="使用者提示詞">使用者提示詞<a href="#使用者提示詞" class="hash-link" aria-label="Direct link to 使用者提示詞" title="Direct link to 使用者提示詞" translate="no">​</a></h3>
+<p>使用者想要跟互動的AI(不論是否包含設定好角色)，發問的內容。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="如何開發提示詞">如何開發提示詞<a href="#如何開發提示詞" class="hash-link" aria-label="Direct link to 如何開發提示詞" title="Direct link to 如何開發提示詞" translate="no">​</a></h2>
+<p>由於模型本身是機率模型，所以開發提示詞的過程中，一定少不了多次的嘗試與持續調整，甚至不同版本的模型，各自對應的提示詞也會有所不同。</p>
+<p>只能通過不斷的試驗，逐漸優化提示，觀察輸出結果，才能做出一個讓自己滿意的提示詞。</p>
+<ol>
+<li class="">避免全方位的角色<!-- -->
+<blockquote>
+<p>越全面的角色，設定的內容越多越複雜，也更容易失焦，反而傾向於攏統描述，不如針對各項專精的項目，謹慎地設定好每個角色分別應該具備的能力與期待完成的目標，才能更有方向的去調教設定，優化產生的品質。</p>
+</blockquote>
+</li>
+<li class="">持續優化、反覆實驗<!-- -->
+<blockquote>
+<p>相同的提示詞，在同一個模型執行多次也會有不同的結果，不同模型間的效果落差甚至會更明顯，只有針對不同的場景，反覆實驗，直到能夠在主要使用的模型上，取得不錯的結果。</p>
+</blockquote>
+</li>
+<li class="">不必過於追求完美<!-- -->
+<blockquote>
+<p>提示工程雖然有指引，但並沒有標準答案，有些提示詞也許第一次問答的結果不夠好，但是根據第一次的回答作為 context 的一部分，往後展開，也許就會出現想要的內容。</p>
+</blockquote>
+</li>
+<li class="">Deep Domain Knowledge<!-- -->
+<blockquote>
+<p>只有當領域知識足夠深厚，才能夠提供更深刻的關鍵詞、Context，讓模型更精準找到你需求的內容，甚至基於這些內容，產生更深刻的結論或是推斷，讓你去做更深的思考。</p>
+</blockquote>
+</li>
+<li class="">清晰 != 囉嗦。<!-- -->
+<blockquote>
+<p>有時候，一個精準的技術術語(關鍵字)比一段冗長的描述更有效。關鍵在於找到「恰到好處」的資訊量，—既能完整傳達意圖，又不會引入不必要的噪音。</p>
+</blockquote>
+</li>
+<li class="">限制<!-- -->
+<blockquote>
+<p>避免模型過於發散，如同前面說到的，我們做提示的目的，就是希望能夠讓模型<strong>猜得準</strong>，所以透過限制，明確告訴模型不能包含哪些部分，也會是很好的引導。</p>
+</blockquote>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-concept">Key Concept<a href="#key-concept" class="hash-link" aria-label="Direct link to Key Concept" title="Direct link to Key Concept" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="in-context-learning-icl">In-Context Learning (ICL)<a href="#in-context-learning-icl" class="hash-link" aria-label="Direct link to In-Context Learning (ICL)" title="Direct link to In-Context Learning (ICL)" translate="no">​</a></h3>
+<p>模型無需更新自身參數（即無需重新訓練），僅透過分析提示中提供的範例，就能學會並執行新任務。<br>
+<strong>表示當模型大到一個程度後，已經展現理解和推理能力。</strong></p>
+<p><img decoding="async" loading="lazy" src="/assets/images/2025-11-16-15-21-09-65f4e8d19c611bd57b0840ab0d89768e.png" width="1432" height="805" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="zero-shot-prompting">Zero-shot Prompting<a href="#zero-shot-prompting" class="hash-link" aria-label="Direct link to Zero-shot Prompting" title="Direct link to Zero-shot Prompting" translate="no">​</a></h3>
+<ul>
+<li class="">定義： 不提供任何任務範例，直接要求模型根據其龐大的預訓練知識完成任務。</li>
+<li class="">運作原理： 模型對自然語言指令的強大理解能力，以及其內部知識庫中已經存在的相關模式。</li>
+<li class="">適用時機：<!-- -->
+<ol>
+<li class="">通用任務： 如翻譯、常識問答等模型在訓練中已大量接觸的任務。</li>
+<li class="">簡單指令： 任務邏輯簡單直接，沒有複雜的格式要求。</li>
+</ol>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Input: 東京位於哪一個國家?<br>
+<!-- -->A: 日本<br>
+<!-- -->(因為這個知識已在模型預訓練包含)</p><hr><p>Q:</p><p>將問題描述的類別名稱設定為「高」、「中」或「低」。僅預測最後一個問題的類別名稱。簡短說明選擇該類別名稱的原因。</p><p>Class name: High<br>
+<!-- -->說明：對企業成本影響高、影響眾多使用者或兩者皆是的問題。<br>
+<!-- -->Class name: Medium<br>
+<!-- -->描述：介於高與低之間的問題。<br>
+<!-- -->Class name: Low<br>
+<!-- -->描述：對少數使用者有影響、沒有高昂的商業成本，或兩者皆有的問題。</p><p>問題：使用者回報無法上傳檔案。</p><p>A:</p><p>Class: High<br>
+<!-- -->Description: 此問題被視為高嚴重性，因為它影響了許多使用者且業務成本高昂。無法上傳檔案可能會阻止使用者完成其任務，進而導致延遲和生產力下降。此外，此問題可能會影響多個部門或團隊，進一步增加業務成本。<br>
+<!-- -->(透過模型本身育訓練的理解能力，幫助回答問題)<br>
+<!-- -->(example from: <a href="https://www.ibm.com/think/topics/zero-shot-prompting" target="_blank" rel="noopener noreferrer" class="">https://www.ibm.com/think/topics/zero-shot-prompting</a>)</p></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="few-shot-prompting">Few-shot Prompting<a href="#few-shot-prompting" class="hash-link" aria-label="Direct link to Few-shot Prompting" title="Direct link to Few-shot Prompting" translate="no">​</a></h3>
+<ul>
+<li class="">定義： 提供少數（通常 1-5 個）範例，讓模型透過範例來歸納出你想要的輸出。</li>
+<li class="">運作原理： 模型透過分析您提供的輸入/輸出對，歸納出任務的潛在規則、邏輯、格式或風格，並將其應用到新的輸入上。</li>
+<li class="">適用時機：<!-- -->
+<ol>
+<li class="">特定格式要求：當您需要模型輸出特定結構（如特定風格的程式碼註解）時。</li>
+<li class="">複雜分類任務：當分類標準比較微妙，難以用語言完全描述時（如判斷用戶評論的意圖是「產品諮詢」、「售後投訴」還是「功能建議」）。</li>
+</ol>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>好的範例本身應基本遵循以下原則：</p><ul>
+<li class="">清晰 + 準確</li>
+<li class="">一致性：所有範例的格式和邏輯應保持高度一致，避免讓模型產生困惑。</li>
+<li class="">覆蓋性：應盡可能涵蓋任務的不同情況。<br>
+<!-- -->(例如，在做主觀評價分析時，最好包含 <strong><code>正面</code></strong>、<strong><code>負面</code></strong> 以及 <strong><code>中性</code></strong> 評論。)</li>
+<li class="">順序：將最複雜的範例放在最後。</li>
+</ul></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="chain-of-thought-cot">Chain-of-Thought (CoT)<a href="#chain-of-thought-cot" class="hash-link" aria-label="Direct link to Chain-of-Thought (CoT)" title="Direct link to Chain-of-Thought (CoT)" translate="no">​</a></h3>
+<p>CoT 實際上是強迫模型將其隱性的思考過程，轉化為顯性可追蹤的文字步驟。<br>
+<!-- -->這不僅僅是為了讓我們看到它的思考過程，更重要的是，這個「寫下來」的動作本身，就能幫助模型更穩定、更合乎邏輯地進行推理，減少了在複雜問題上「一步錯，步步錯」的情況。</p>
+<ul>
+<li class="">定義： <strong><code>Let&#x27;s think step by step.</code></strong> (<strong><code>請一步一步地思考。</code></strong>)</li>
+<li class="">運作原理：<!-- -->
+<blockquote>
+<p>CoT 將一個複雜的大問題，分解成一系列更小的中間步驟。模型在每一步只需要專注於一個子問題，從而降低了出錯的機率。<br>
+<!-- -->生成的每一步推理，都為後續的步驟提供了完整的 Context，確保邏輯鏈的連貫性。<br>
+<!-- -->類似於人類在解決難題時進行演算的過程。將思考過程外化，有助於整理思路和發現潛在的錯誤。</p>
+</blockquote>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>如果覺得 <code>Let&#x27;s think step by step.</code> 效果不如預期，可能是模型自動產生的步驟並不正確。<br>
+<!-- -->可以試著提供手動 CoT 的簡單範例，觀察是否會有所改善。</p></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="self-consistency">Self-Consistency<a href="#self-consistency" class="hash-link" aria-label="Direct link to Self-Consistency" title="Direct link to Self-Consistency" translate="no">​</a></h3>
+<p>Self-Consistency 是 CoT 的一個延伸，簡單說，就是讓模型採樣多個不同的推理路徑，然後從多個產生結果中，選出最一致的答案。</p>
+<ul>
+<li class="">運作原理：<!-- -->
+<ol>
+<li class="">多路徑生成：針對同一個問題，多次運行 CoT 提示。由於生成過程帶有隨機性，每次生成的推理路徑都會略有不同。</li>
+<li class="">答案投票：收集所有這些不同推理路徑得出的最終答案。</li>
+<li class="">選擇最優解：選擇在這些答案中出現次數最多的那個，作為最終的可信的答案。</li>
+</ol>
+</li>
+<li class="">優勢
+一個複雜問題可能有多種解法，即使某些解法在中間步驟出現了小錯誤，但只要大部分的推理路徑都能指向同一個答案，那麼這個答案的可信度就非常高。<br>
+<!-- -->這種類似「群體智慧」的方法，極大地增強了結果的穩定性。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tree-of-thoughts-tot">Tree of Thoughts (ToT)<a href="#tree-of-thoughts-tot" class="hash-link" aria-label="Direct link to Tree of Thoughts (ToT)" title="Direct link to Tree of Thoughts (ToT)" translate="no">​</a></h3>
+<p>CoT 的思考是線性單向的，一旦某個環節出錯，整個後面就可能導致連環錯。</p>
+<ul>
+<li class="">運作原理：<!-- -->
+<ol>
+<li class="">分解步驟：像 CoT 一樣，將問題分解成多個思考步驟。</li>
+<li class="">多路徑探索：在<strong>每一個</strong>步驟上，ToT 都會引導模型生成多個可能的「<strong>下一步</strong>」或「<strong>中間解</strong>」。這就像從樹的同一個節點，長出了多個分枝。</li>
+<li class="">評估：ToT 會引導模型對每個分枝的「好壞」或「前景」進行自我評估，判斷有沒有價值。</li>
+<li class="">剪枝與回溯：模型會「剪掉」那些被評估為沒有前途的分枝，並集中資源在更有希望的路徑上繼續探索。如果所有路徑都走不通，它甚至可以「回溯」到上一個節點，嘗試其他可能性。</li>
+</ol>
+</li>
+<li class="">優勢
+當一個任務需要綜合評估多種方案時，使用ToT就能展現出優勢，這也是 Agent 收到使用者任務，制定相關計畫的核心能力。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="retrieval-augmented-generation-rag">Retrieval-Augmented Generation (RAG)<a href="#retrieval-augmented-generation-rag" class="hash-link" aria-label="Direct link to Retrieval-Augmented Generation (RAG)" title="Direct link to Retrieval-Augmented Generation (RAG)" translate="no">​</a></h3>
+<p>檢索增強生成，是目前將 LLM 應用於企業知識庫最主流、最重要的技術框架。</p>
+<ul>
+<li class="">運作原理：<!-- -->
+<ol>
+<li class="">查詢：您的問題首先被發送到一個「檢索器 (Retriever)」。</li>
+<li class="">檢索：檢索器會將問題轉換為向量，然後在公司的「知識庫」（一個預先被處理和向量化的文件資料庫，如 Confluence、Google Drive 裡的文件）中，搜尋語義上最相關的文本片段（Chunks）。</li>
+<li class="">增強 (Augment)：檢索器將找到的這些相關文本片段，連同您最初的問題，一起「打包」成一個更豐富、包含更多上下文的提示。</li>
+<li class="">生成 (Generate)：這個被「增強」過的提示，最終被發送給 LLM。</li>
+<li class="">回答：LLM 根據您提供的即時、準確的上下文，生成一個有理有據的回答，而不是依賴其可能已經過時的內部知識。</li>
+</ol>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="react-reason--act">ReAct (Reason + Act)<a href="#react-reason--act" class="hash-link" aria-label="Direct link to ReAct (Reason + Act)" title="Direct link to ReAct (Reason + Act)" translate="no">​</a></h3>
+<p>LLM 的知識被凍結在它們的訓練數據中，它們無法獲取即時資訊，也無法執行計算之外的動作。<strong>ReAct</strong> 徹底改變了這一點，它讓模型成為了一個能夠使用「工具」的智慧代理 (Agent)。</p>
+<ul>
+<li class="">運作原理： ReAct 的核心是一個「思考 -&gt; 行動 -&gt; 觀察」的循環。<!-- -->
+<ol>
+<li class="">Reason：模型首先分析任務，並判斷是否需要使用外部工具。<br>
+<!-- -->如果需要，它會決定使用哪個工具，以及如何使用（即生成呼叫所需的程式碼或指令）。</li>
+<li class="">Act：系統執行模型生成的指令，調用外部工具。<br>
+<!-- -->這些工具可以是：<!-- -->
+<ul>
+<li class="">搜尋引擎 API：用於查詢即時資訊（如今天的天氣、某支股票的最新價格）。</li>
+<li class="">計算機/程式碼解釋器：用於執行精確的數學計算或程式碼。</li>
+<li class="">資料庫查詢 API：用於從企業內部資料庫中獲取數據。</li>
+<li class="">任何其他 API：如訂票、發送郵件等。</li>
+</ul>
+</li>
+<li class="">觀察：接收 Act 返回的結果。</li>
+<li class="">再次思考：模型將觀察到的新資訊，整合到 Context 中，然後進行下一步的思考，決定是繼續使用工具，還是已經擁有足夠資訊來回答最終問題。</li>
+</ol>
+</li>
+</ul>
+<p>ReAct 框架極大地擴展了 LLM 的能力邊界，使其轉變為一個能夠動手解決現實世界問題的「數位助理」。<br>
+<!-- -->(已見 AI Agents 的雛形)</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="timeline">Timeline<a href="#timeline" class="hash-link" aria-label="Direct link to Timeline" title="Direct link to Timeline" translate="no">​</a></h2>
+<!-- -->
+<!-- -->
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="reference">Reference<a href="#reference" class="hash-link" aria-label="Direct link to Reference" title="Direct link to Reference" translate="no">​</a></h2>
+<p><a href="https://www.promptingguide.ai" target="_blank" rel="noopener noreferrer" class="">Prompt Engineering Guide</a><br>
+<a href="https://learnprompting.org/docs/introduction" target="_blank" rel="noopener noreferrer" class="">Learn Prompting</a><br>
+<a href="https://cookbook.openai.com" target="_blank" rel="noopener noreferrer" class="">openai-cookbook</a><br>
+<a href="https://ai.google.dev/gemini-api/docs/prompting-strategies" target="_blank" rel="noopener noreferrer" class="">Gemini Api Prompt Strategy</a><br>
+<a href="https://www.digitalocean.com/community/tutorials?q=prompt" target="_blank" rel="noopener noreferrer" class="">Digital Ocean Prompt Tutorials</a><br>
+<a href="https://www.kapa.ai/blog/rag-best-practices" target="_blank" rel="noopener noreferrer" class="">RAG Best Practices</a><br>
+<a href="https://www.ibm.com/think/topics/zero-shot-prompting" target="_blank" rel="noopener noreferrer" class="">zero-shot-prompting</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="paper">Paper<a href="#paper" class="hash-link" aria-label="Direct link to Paper" title="Direct link to Paper" translate="no">​</a></h2>
+<p><a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener noreferrer" class="">Attention Is All You Need</a><br>
+<a href="https://arxiv.org/abs/2005.14165" target="_blank" rel="noopener noreferrer" class="">Language Models are Few-Shot Learners</a><br>
+<a href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener noreferrer" class="">RAG : Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a><br>
+<a href="https://arxiv.org/abs/2201.11903" target="_blank" rel="noopener noreferrer" class="">Chain-of-Thought (CoT)</a><br>
+<a href="https://arxiv.org/abs/2210.03629" target="_blank" rel="noopener noreferrer" class="">ReAct</a>
+<a href="https://arxiv.org/abs/2305.10601" target="_blank" rel="noopener noreferrer" class="">Tree of Thoughts (ToT)</a></p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-tags-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/tags/prompt">Prompt</a></li></ul></div></div><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/deverqqqq/DevElixir/tree/main/docs/ai/01_prompt.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/ai/intro"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Overview</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#提示工程-prompt-engineering" class="table-of-contents__link toc-highlight">提示工程 (Prompt Engineering)</a></li><li><a href="#pattern" class="table-of-contents__link toc-highlight">Pattern</a><ul><li><a href="#角色提示" class="table-of-contents__link toc-highlight">角色提示</a></li><li><a href="#上下文提示" class="table-of-contents__link toc-highlight">上下文提示</a></li><li><a href="#限制提示" class="table-of-contents__link toc-highlight">限制提示</a></li><li><a href="#範例提示" class="table-of-contents__link toc-highlight">範例提示</a></li><li><a href="#翻轉提示" class="table-of-contents__link toc-highlight">翻轉提示</a></li></ul></li><li><a href="#系統提示詞-vs-使用者提示詞" class="table-of-contents__link toc-highlight">系統提示詞 vs 使用者提示詞</a><ul><li><a href="#系統提示詞" class="table-of-contents__link toc-highlight">系統提示詞</a></li><li><a href="#使用者提示詞" class="table-of-contents__link toc-highlight">使用者提示詞</a></li></ul></li><li><a href="#如何開發提示詞" class="table-of-contents__link toc-highlight">如何開發提示詞</a></li><li><a href="#key-concept" class="table-of-contents__link toc-highlight">Key Concept</a><ul><li><a href="#in-context-learning-icl" class="table-of-contents__link toc-highlight">In-Context Learning (ICL)</a></li><li><a href="#zero-shot-prompting" class="table-of-contents__link toc-highlight">Zero-shot Prompting</a></li><li><a href="#few-shot-prompting" class="table-of-contents__link toc-highlight">Few-shot Prompting</a></li><li><a href="#chain-of-thought-cot" class="table-of-contents__link toc-highlight">Chain-of-Thought (CoT)</a></li><li><a href="#self-consistency" class="table-of-contents__link toc-highlight">Self-Consistency</a></li><li><a href="#tree-of-thoughts-tot" class="table-of-contents__link toc-highlight">Tree of Thoughts (ToT)</a></li><li><a href="#retrieval-augmented-generation-rag" class="table-of-contents__link toc-highlight">Retrieval-Augmented Generation (RAG)</a></li><li><a href="#react-reason--act" class="table-of-contents__link toc-highlight">ReAct (Reason + Act)</a></li></ul></li><li><a href="#timeline" class="table-of-contents__link toc-highlight">Timeline</a></li><li><a href="#reference" class="table-of-contents__link toc-highlight">Reference</a></li><li><a href="#paper" class="table-of-contents__link toc-highlight">Paper</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 DevElixir. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
